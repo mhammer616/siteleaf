@@ -1,0 +1,25 @@
+<input type="checkbox" id="searchToggle">
+<label for="searchToggle">
+    <span class="fas fa-search"></span>
+    <span class="sr-only">Show Search</span>
+</label>
+<form class="search">
+    <div>
+        <div class="row no-mb">
+            <div class="form-el">
+                <label for="toggleKeyword">Search</label>
+                <input placeholder="Enter Keywords..." id="toggleKeyword" type="text" required="" pattern=".*\S.*">
+            </div>
+            <div class="form-btn">
+                <button type="submit" class="btn-primary">
+                    <span class="fas fa-search"></span>
+                    <span class="sr-only">Search</span>
+                </button>
+                <label for="searchToggle" class="btn-text" tabindex="0">
+                    <span class="fas fa-times"></span>
+                    <span class="sr-only">Hide Search</span>
+                </label>
+            </div>
+        </div>
+    </div>
+</form>

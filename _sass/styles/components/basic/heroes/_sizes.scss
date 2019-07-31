@@ -1,0 +1,22 @@
+/*  --------------------------------------------------------------------------  *\
+
+    HERO > SIZES
+
+\*  --------------------------------------------------------------------------  */
+&.hero-lg {
+    padding: #{$gutterLg * 3} 0;
+}
+
+&.hero-md {
+    padding: #{$gutterLg * 2} 0;
+}
+
+&.hero-sm {
+    padding: #{$gutterLg} 0;
+}
+
+&.hero-fs {
+    @include flex(center, center, center, row nowrap);
+    height: 100vh;
+    padding: #{$gutterLg * 2};
+}

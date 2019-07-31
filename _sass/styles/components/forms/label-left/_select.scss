@@ -1,0 +1,16 @@
+/*  --------------------------------------------------------------------------  *\
+
+    FORMS > LABEL LEFT > SELECTS
+
+\*  --------------------------------------------------------------------------  */
+select {
+    display: block;
+    order: 1;
+    width: calc(100% - 12.5rem - #{$gutter * .5});
+    padding: #{$gutterSm * .5};
+    border: .1rem solid $secondary;
+    
+    &:focus {
+        border-color: $tertiary;
+    }
+}

@@ -1,0 +1,9 @@
+<a href="{{ include.btnUrl }}" class="{{ include.btnClass }}">
+    {% if include.btnArrow and include.btnArrowPosition == "before" %}
+        <span class="{{ include.btnArrow }}"></span>
+    {% endif %}
+    {{ include.btnText }}
+    {% if include.btnArrow and include.btnArrowPosition == "after" %}
+        <span class="{{ include.btnArrow }}"></span>
+    {% endif %}
+</a>

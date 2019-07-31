@@ -1,0 +1,32 @@
+/*  --------------------------------------------------------------------------  *\
+
+    FORMS
+
+    Each form component should have it's own file each alteration should have it's
+    own file.
+
+    The default files below will be used to show a basic form with labels above.
+    
+    Additional styling of forms can be found in the themes > component library
+    folder to show examples of the other forms found in the component library.
+
+\*  --------------------------------------------------------------------------  */
+form {
+    @import '_check-radios';
+    
+    &.l-above {
+        @import 'label-above/_base';
+    }
+    
+    &.l-inside {
+        @import 'label-inside/_base';
+    }
+    
+    &.l-left {
+        @import 'label-left/_base';
+    }
+    
+    &.l-attached {
+        @import 'label-attached/_base';
+    }
+}

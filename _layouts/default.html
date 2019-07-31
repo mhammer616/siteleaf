@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0" name="viewport">
+    <title>{{ page.title }} | R2i {{ site.title }}</title>
+    <link href="/assets/css/styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    {% include structure/header.html %}
+    <main {% if page.mainClass %}class="{{ page.mainClass }}"{% endif %}>
+        {% include components/basic/hero.html %}
+        {{ content }}
+    </main>
+    {% include structure/footer.html %}
+    {% if page.dialogs %}
+        <div id="dialog_layer" class="dialogs">
+            {% include components/interactive/dialog.html %}
+        </div>
+    {% endif %}
+    <script src="/assets/javascript/components/basic/fact-animated.js"></script>
+    <script src="/assets/javascript/components/interactive/accordions.js"></script>
+    <script src="/assets/javascript/components/interactive/dialog.js"></script>
+    <script src="/assets/javascript/components/interactive/lazy-load.js"></script>
+    <script src="/assets/javascript/components/interactive/owl.carousel.min.js"></script>
+    <script src="/assets/javascript/components/interactive/tabs.js"></script>
+    <script src="/assets/javascript/structural/site.js"></script>    
+</body>
+</html>

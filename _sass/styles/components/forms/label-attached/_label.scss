@@ -1,0 +1,25 @@
+/*  --------------------------------------------------------------------------  *\
+
+    FORMS > LABEL ATTACHED > LABELS
+
+\*  --------------------------------------------------------------------------  */
+label {
+    display: block;
+    order: 0;
+    margin: 0;
+    padding: #{$gutterSm * .5};
+    width: 12.5rem;
+    text-align: left;
+    border: .1rem solid $secondary;
+    background: $tertiary;
+    font-size: 1.4rem;
+    line-height: 1.5em;
+}
+
+input, select, textarea {
+    &:focus {
+        + label {
+            border-color: $tertiary;
+        }
+    }
+}

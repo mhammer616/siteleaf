@@ -1,0 +1,30 @@
+{% assign postI = 1 %}
+<div class="{{ include.class }} {% if include.imgRatio %}w-img{% endif %}" role="feed">
+    {% for post in site.posts limit: include.count %}
+        <article tabindex="0" aria-labelledby="title{{ postI }}" aria-posinset="{{ postI }}" aria-setsize="3">
+            {% if include.imgRatio %}
+                <a href="#"><img src="https://via.placeholder.com/{{ include.imgRatio }}/ccc/e1e1e1?text=Image" alt="Lorem Pixel generated black and white photo"></a>
+            {% endif %}
+            <div>
+                <p class="type">
+                    {% case post.categories[0]  %}
+                        {% when 'Blog' %}
+                            <span class="fas fa-rss"></span>
+                        {% when 'Event' %}
+                            <span class="fas fa-calendar-alt"></span>
+                        {% when 'Whitepaper' %}
+                            <span class="fas fa-file-alt"></span>
+                        {% when 'Infographic' %}
+                            <span class="fas fa-image"></span>
+                        {% when 'News' %}
+                            <span class="far fa-newspaper"></span>
+                    {% endcase %}
+                    {{ post.categories }}
+                </p>
+                <h3 id="title{{ postI }}"><a href="#">{{ post.title }}</a></h3>
+                <p class="by">By {{ post.author }} on  {{ post.date | date: "%B, %d %Y" }}</p>
+            </div>
+        </article>
+        {% assign postI = postI | plus: 1 %}
+    {% endfor %}
+</div>

@@ -1,0 +1,18 @@
+<nav{% if include.class %} class="{{ include.class }}"{% endif %}>
+    <ul>
+        {% for item in include.navContent %}
+        <li>
+            <a href="{{ item.link }}"{% if item.class %} class="item.class"{% endif %}>{{ item.name }}</a>
+            {% if item.children %}
+            <ul>
+                {% for child in item.children %}
+                <li>
+                    <a href="{{ child.link }}"{% if child.class %} class="child.class"{% endif %}>{{ child.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+</nav>

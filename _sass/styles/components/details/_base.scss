@@ -1,0 +1,12 @@
+/*  --------------------------------------------------------------------------  *\
+
+    DETAILS
+
+\*  --------------------------------------------------------------------------  */
+.article-detail {
+    @import 'article/_layout';
+    @import 'article/_byline';
+    @import 'article/_bio';
+    @import 'article/_share';
+    @import 'article/_tags';
+}

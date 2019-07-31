@@ -1,0 +1,49 @@
+- name: Work
+  link: /work
+- name: About
+  link: /about
+  children:
+    - name: Leadership
+      link: /about/leadership.html
+    - name: Partners
+      link: /about/partners.html
+    - name: Culture
+      link: /about/culture.html
+- name: Services
+  link: /services
+  children: 
+    - name: Strategy & Insights
+      link: /services/strategy-and-insights.html
+    - name: Technology
+      link: /services/technology.html
+    - name: Experience Design
+      link: /services/experience-design.html
+    - name: Media
+      link: /services/media.html
+    - name: Digital Marketing
+      link: /services/digital-marketing.html
+    - name: Teleservices
+      link: /services/teleservices.html
+- name: Industries
+  link: /industries
+  children:
+    - name: High Tech
+      link: /industries/high-tech.html
+    - name: Healthcare
+      link: /industries/healthcare.html
+    - name: Industrial/Manufacturing
+      link: /industries/industrial-manufacturing.html
+    - name: Higher Education
+      link: /industries/higher-education.html
+    - name: Professional Services
+      link: /industries/professional-services.html
+    - name: Consumer
+      link: /industries/consumer.html
+    - name: Non-Profit
+      link: /industries/non-profit.html
+- name: R2insights
+  link: /r2insights
+- name: Careers
+  link: /careers
+- name: Contact
+  link: /contact

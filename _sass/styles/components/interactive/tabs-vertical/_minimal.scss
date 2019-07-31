@@ -1,0 +1,53 @@
+/*  --------------------------------------------------------------------------  *\
+
+    TABS - TRADITIONAL
+
+\*  --------------------------------------------------------------------------  */
+&.minimal {
+    @media #{$mediaMd} {
+        > dt {
+            // POSITIONING (DISPLAY, FLEX, FLEX ITEM, POSITION, LEFT, TOP, TRANSFORM)
+            // BOX SIZING (WIDTH, HEIGHT, MARGIN, PADDING)
+            // BOX STYLING (OPACITY, BACKGROUND, BOX SHADOW, BORDER, BORDER RADIUS, OVERFLOW)
+            // FONT STYLING (FONT, FONT-FAMILY, FONT-STYLE, FONT-SIZE, LINE-HEIGHT, FONT-WEIGHT)
+            // TEXT STYLING (TEXT-DECORATION, TEXT-TRANSFORM, TEXT-ALIGN, TEXT-SHADOW)
+            // OTHER (TRANSITONS, ANIMATIONS, CURSOR)
+
+            > button {
+                // POSITIONING (DISPLAY, FLEX, FLEX ITEM, POSITION, LEFT, TOP, TRANSFORM)
+                display: block;
+                // BOX SIZING (WIDTH, HEIGHT, MARGIN, PADDING)
+                padding: #{$gutter * .4} #{$gutter * .8};
+                width: calc(100% + 2px);
+                // BOX STYLING (OPACITY, BACKGROUND, BOX SHADOW, BORDER, BORDER RADIUS, OVERFLOW)
+                border-right: 2px solid $accent-3;
+                // FONT STYLING (FONT, FONT-FAMILY, FONT-STYLE, FONT-SIZE, LINE-HEIGHT, FONT-WEIGHT)
+                color: $accent-3;
+                // TEXT STYLING (TEXT-DECORATION, TEXT-TRANSFORM, TEXT-ALIGN, TEXT-SHADOW)
+                // OTHER (TRANSITONS, ANIMATIONS, CURSOR)
+
+                @include hover {
+                    // POSITIONING (DISPLAY, FLEX, FLEX ITEM, POSITION, LEFT, TOP, TRANSFORM)
+                    // BOX SIZING (WIDTH, HEIGHT, MARGIN, PADDING)
+                    // BOX STYLING (OPACITY, BACKGROUND, BOX SHADOW, BORDER, BORDER RADIUS, OVERFLOW)
+                    // FONT STYLING (FONT, FONT-FAMILY, FONT-STYLE, FONT-SIZE, LINE-HEIGHT, FONT-WEIGHT)
+                    color: $primary;
+                    // TEXT STYLING (TEXT-DECORATION, TEXT-TRANSFORM, TEXT-ALIGN, TEXT-SHADOW)
+                    // OTHER (TRANSITONS, ANIMATIONS, CURSOR)
+                }
+
+                &[aria-expanded="true"] {
+                    // POSITIONING (DISPLAY, FLEX, FLEX ITEM, POSITION, LEFT, TOP, TRANSFORM)
+                    // BOX SIZING (WIDTH, HEIGHT, MARGIN, PADDING)
+                    // BOX STYLING (OPACITY, BACKGROUND, BOX SHADOW, BORDER, BORDER RADIUS, OVERFLOW)
+                    border-right-color: $primary;
+                    // FONT STYLING (FONT, FONT-FAMILY, FONT-STYLE, FONT-SIZE, LINE-HEIGHT, FONT-WEIGHT)
+                    color: $primary;
+                    // TEXT STYLING (TEXT-DECORATION, TEXT-TRANSFORM, TEXT-ALIGN, TEXT-SHADOW)
+                    // OTHER (TRANSITONS, ANIMATIONS, CURSOR)
+                }
+
+            }
+        }
+    }
+}

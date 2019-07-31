@@ -1,0 +1,20 @@
+/*  --------------------------------------------------------------------------  *\
+
+    HEADER - LAYOUT - HORIZONTAL
+
+\*  --------------------------------------------------------------------------  */
+& {
+    padding: #{$gutterSm / 2} 0;
+    
+    > div {
+        @include flex(space-between, center, null, row nowrap);
+        margin: 0 auto;
+        padding: 0 #{$gutterSm};
+        max-width: $siteWMx;
+        @include setW;
+        
+        @media #{$mediaFullHeader} {
+            padding: 0 #{$gutter};
+        }
+    }
+}

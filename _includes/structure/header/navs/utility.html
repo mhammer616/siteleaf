@@ -1,0 +1,21 @@
+<ul class="util">
+    {% for item in site.data.navigation.utility %}
+    <li><a href="{{ item.link }}">{{ item.name }}</a></li>
+    {% endfor %}
+    {% if include.searchLocation == "utility nav" %}
+        {% case include.searchStyle %}
+            {% when 'dialog' %}
+                <li>
+                    {% include structure/header/search/dialog-button.html %}
+                </li>
+            {% when 'over' %}
+                <li>
+                    {% include structure/header/search/over-button.html %}
+                </li>
+            {% when 'inline' %}
+                <li>
+                    {% include structure/header/search/inline.html %}
+                </li>
+        {% endcase %}
+    {% endif %}
+</ul>

@@ -1,0 +1,44 @@
+<header {% if include.class %}class="{{ include.class }}"{% endif %}>
+    {% if page.videoRatio %}
+    <video width="320" height="240" poster="https://via.placeholder.com/{{ page.videoRatio }}/333/222/?text=VIDEO" controls="true">
+        <img src="https://via.placeholder.com/{{ page.videoRatio }}/333/222/?text=VIDEO" alt="Video Placeholder" />
+    </video>
+    {% elsif page.heroPicture %}
+    <picture>
+        {% if page.heroPicXs %}
+        <source srcset="https://via.placeholder.com/{{ page.heroPicXs }}/333/222?text=1:1+XS" media="(max-width: 576px)">
+        {% endif %}
+        {% if page.heroPicSm %}
+        <source srcset="https://via.placeholder.com/{{ page.heroPicSm }}/333/222?text=1:1+SM" media="(max-width: 768px)">
+        {% endif %}
+        {% if page.heroPicMd %}
+        <source srcset="https://via.placeholder.com/{{ page.heroPicMd }}/333/222?text=1:1+MD" media="(max-width: 992px)">
+        {% endif %}
+        {% if page.heroPicLg %}
+        <source srcset="https://via.placeholder.com/{{ page.heroPicLg }}/333/222?text=16:7+LG" media="(max-width: 1600px)">
+        {% endif %}
+        {% if page.heroPicXl %}
+        <source srcset="https://via.placeholder.com/{{ page.heroPicXl }}/333/222?text=16:5+XL" media="(min-width: 1920px)">
+        {% endif %}
+        <img src="https://via.placeholder.com/{{ page.heroImgRatio }}/333/222?text=16:7+LG" alt="Placeholder image" />
+    </picture>
+    {% elsif page.heroImgRatio %}
+        <img src="https://via.placeholder.com/{{ page.heroImgRatio }}/333/222/?text=VIDEO" alt="Video Placeholder" />
+    {% endif %}
+    <div>
+        {% if page.locBreadcrumb == "hero" %}
+            {% include components/navigation/breadcrumb.html %}
+        {% endif %}
+        {% if page.heroTitle %}
+            <h1>{{ page.heroTitle }}</h1>
+        {% else %}
+            <h1>{{ page.title }}</h1>
+        {% endif %}
+        {% if page.heroSubtitle %}
+            <p class="intro">{{ page.heroSubtitle }}</p>
+        {% endif %}
+        {% if page.heroCTAText and page.heroCTALink %}
+            <a href="{{ page.heroCTALink }}" class="btn-primary">{{ page.heroCTAText }}</a>
+        {% endif %}
+    </div>
+</header>

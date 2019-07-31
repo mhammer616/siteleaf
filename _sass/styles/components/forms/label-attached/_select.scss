@@ -1,0 +1,19 @@
+/*  --------------------------------------------------------------------------  *\
+
+    FORMS > LABEL ATTACHED > SELECTS
+
+\*  --------------------------------------------------------------------------  */
+select {
+    display: block;
+    order: 1;
+    width: calc(100% - 12.5rem);
+    padding: #{$gutterSm * .5};
+    border: .1rem solid $secondary;
+    border-left: none;
+    font-size: 1.4rem;
+    line-height: 1.5em;
+    
+    &:focus {
+        border-color: $tertiary;
+    }
+}

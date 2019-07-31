@@ -1,0 +1,85 @@
+/*  --------------------------------------------------------------------------  *\
+
+    LANDING NAVIGATIONS
+
+\*  --------------------------------------------------------------------------  */
+&.cp {
+    // POSITIONING (DISPLAY, FLEX, FLEX ITEM, POSITION, LEFT, TOP, TRANSFORM)
+    // BOX SIZING (WIDTH, HEIGHT, MARGIN, PADDING)
+    margin: 0 0 #{$gutter};
+    // BOX STYLING (OPACITY, BACKGROUND, BOX SHADOW, BORDER, BORDER RADIUS, OVERFLOW)
+    // FONT STYLING (FONT, FONT-FAMILY, FONT-STYLE, FONT-SIZE, LINE-HEIGHT, FONT-WEIGHT)
+    // TEXT STYLING (TEXT-DECORATION, TEXT-TRANSFORM, TEXT-ALIGN, TEXT-SHADOW)
+    // OTHER (TRANSITONS, ANIMATIONS, CURSOR)
+    
+    ul {
+        // POSITIONING (DISPLAY, FLEX, FLEX ITEM, POSITION, LEFT, TOP, TRANSFORM)
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: #{$gutterSm};
+        grid-column-gap: #{$gutterSm};
+        // BOX SIZING (WIDTH, HEIGHT, MARGIN, PADDING)
+        // BOX STYLING (OPACITY, BACKGROUND, BOX SHADOW, BORDER, BORDER RADIUS, OVERFLOW)
+        // FONT STYLING (FONT, FONT-FAMILY, FONT-STYLE, FONT-SIZE, LINE-HEIGHT, FONT-WEIGHT)
+        // TEXT STYLING (TEXT-DECORATION, TEXT-TRANSFORM, TEXT-ALIGN, TEXT-SHADOW)
+        // OTHER (TRANSITONS, ANIMATIONS, CURSOR)
+        
+        @media #{$mediaMd} {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        
+        @media #{$mediaLg} {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+    
+    span {
+        // POSITIONING (DISPLAY, FLEX, FLEX ITEM, POSITION, LEFT, TOP, TRANSFORM)
+        display: block;
+        // BOX SIZING (WIDTH, HEIGHT, MARGIN, PADDING)
+        margin: 0 auto #{$gutter};
+        // BOX STYLING (OPACITY, BACKGROUND, BOX SHADOW, BORDER, BORDER RADIUS, OVERFLOW)
+        // FONT STYLING (FONT, FONT-FAMILY, FONT-STYLE, FONT-SIZE, LINE-HEIGHT, FONT-WEIGHT)
+        font-size: 10rem;
+        // TEXT STYLING (TEXT-DECORATION, TEXT-TRANSFORM, TEXT-ALIGN, TEXT-SHADOW)
+        text-align: center;
+        // OTHER (TRANSITONS, ANIMATIONS, CURSOR)
+    }
+    
+    a {
+        // POSITIONING (DISPLAY, FLEX, FLEX ITEM, POSITION, LEFT, TOP, TRANSFORM)
+        display: block;
+        // BOX SIZING (WIDTH, HEIGHT, MARGIN, PADDING)
+        padding: #{$gutter};
+        // BOX STYLING (OPACITY, BACKGROUND, BOX SHADOW, BORDER, BORDER RADIUS, OVERFLOW)
+        background: $accent-1;
+        border: .2rem solid $accent-3;
+        // FONT STYLING (FONT, FONT-FAMILY, FONT-STYLE, FONT-SIZE, LINE-HEIGHT, FONT-WEIGHT)
+        // TEXT STYLING (TEXT-DECORATION, TEXT-TRANSFORM, TEXT-ALIGN, TEXT-SHADOW)
+        text-align: center;
+        // OTHER (TRANSITONS, ANIMATIONS, CURSOR)
+    
+        @include hover {
+            // POSITIONING (DISPLAY, FLEX, FLEX ITEM, POSITION, LEFT, TOP, TRANSFORM)
+            // BOX SIZING (WIDTH, HEIGHT, MARGIN, PADDING)
+            // BOX STYLING (OPACITY, BACKGROUND, BOX SHADOW, BORDER, BORDER RADIUS, OVERFLOW)
+            border-color: $primary;
+            background: $primary;
+            // FONT STYLING (FONT, FONT-FAMILY, FONT-STYLE, FONT-SIZE, LINE-HEIGHT, FONT-WEIGHT)
+            color: $white;
+            // TEXT STYLING (TEXT-DECORATION, TEXT-TRANSFORM, TEXT-ALIGN, TEXT-SHADOW)
+            // OTHER (TRANSITONS, ANIMATIONS, CURSOR)
+        }
+    
+        &.active {
+            // POSITIONING (DISPLAY, FLEX, FLEX ITEM, POSITION, LEFT, TOP, TRANSFORM)
+            // BOX SIZING (WIDTH, HEIGHT, MARGIN, PADDING)
+            // BOX STYLING (OPACITY, BACKGROUND, BOX SHADOW, BORDER, BORDER RADIUS, OVERFLOW)
+            // FONT STYLING (FONT, FONT-FAMILY, FONT-STYLE, FONT-SIZE, LINE-HEIGHT, FONT-WEIGHT)
+            // TEXT STYLING (TEXT-DECORATION, TEXT-TRANSFORM, TEXT-ALIGN, TEXT-SHADOW)
+            text-decoration: underline;
+            // OTHER (TRANSITONS, ANIMATIONS, CURSOR)
+        }
+    }
+}

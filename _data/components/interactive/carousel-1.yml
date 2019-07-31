@@ -1,0 +1,12 @@
+- name: Basic Carousel
+  content: <p>This carousel is set up with all the basic functionality needed for a Carousel to work. </p>
+- name: Owl Carousel
+  content: <p>We utilize <a href="http://owlcarousel2.github.io/OwlCarousel2/" target="_blank">Owl Carousel</a> for all carousels.</p>
+- name: Initialization
+  content: <p>In the global.js file we initialize all carousels using jQuery to select all elements with a class of "owl-carosuel".</p>
+- name: Setting Options
+  content: <p>We utilize a custom attribute of "data-options" to set all options using a JSON object. All options can be found <a href="https://owlcarousel2.github.io/OwlCarousel2/docs/api-options.html" target="_blank">here</a>.</p>
+- name: Nav Placement
+  content: <p>The core installation comes with many options for placement of the navigation, however, on your site you'll probably only need one of those options. Update the "components > interactie > carousels > _base.scss" file to include only the styles you will need.</p>
+- name: Dot Placement
+  content: <p>The core installation comes with many options for placement and style of the dots, however, on your site you'll probably only need one of those options. Update the "components > interactie > carousels > _base.scss" file to include only the styles you will need.</p>

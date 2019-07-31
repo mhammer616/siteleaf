@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<section>
+    <div class="article-detail">
+        <article>
+            {{ content }}
+            {% include components/detail/article/bio.html %}
+        </article>
+        <aside>
+            {% include components/detail/article/share.html %}
+            {% include components/detail/article/byline.html %}
+            {% include components/detail/article/tags.html %}
+        </aside>
+    </div>
+</section>

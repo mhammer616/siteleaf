@@ -1,0 +1,37 @@
+{% assign showUtilityBar = false %}
+{% if include.utilityNavLoc == "utility bar" %}
+    {% assign showUtilityBar = true %}
+{% endif %}
+<nav>
+    <ul class="main-nav">
+        {% for item in site.data.navigation.main %}
+        <li {% if page.url contains item.link %}class="active"{% endif %}>
+            <a href="{{ item.link }}">
+                {{ item.name }}
+            </a>
+            {% if item.children %}
+            <input type="checkbox" id="{{ headerID }}Nav{{ item.name | remove: " " }}">
+            <label for="{{ headerID }}Nav{{ item.name | remove: " " }}"><span class="toggle-text">Show{{ item.name }} Subpages</span> <span class="fas fa-chevron-right"></span></label>
+            <ul>
+                <li><label for="{{ headerID }}Nav{{ item.name | remove: " " }}" tabindex="0"><span class="fas fa-chevron-left"></span> Back to Main Nav</label></li>
+                <li><a href="{{ item.link }}">{{ item.name }}</a></li>
+                {% for child in item.children %}
+                <li><a href="{{ child.link }}">{{ child.name }}</a></li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </li>
+        {% endfor %}
+        {% if include.searchLocation == "main nav" %}
+            <li>
+                {% include structure/header/search/search.html %}
+            </li>
+        {% endif %}
+    </ul>
+    {% if include.utilityNavLoc == "main nav" %}
+        {% include structure/header/navs/utility.html %}
+    {% endif %}
+    {% if showUtilityBar %}
+        {% include structure/header/utility-bar.html %}
+    {% endif %}
+</nav>

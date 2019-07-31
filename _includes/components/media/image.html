@@ -1,0 +1,13 @@
+<figure {% if include.class %}class="{{ include.class }}"{% endif %} {% if include.tabindex %}tabindex="{{ include.tabindex }}"{% endif %}>
+    <img src="https://via.placeholder.com/1600x900/333/222?text=16:9+MD" alt="Placeholder image">
+    <figcaption>
+        {% if include.title %}
+            <h3>{{ include.title }}</h3>
+        {% endif %}
+        {% if include.copy %}
+            <p>{{ include.copy }}</p>
+        {% else %}
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, libero cumque sunt dolor, eos beatae.</p>
+        {% endif %}
+    </figcaption>
+</figure>

@@ -1,0 +1,50 @@
+/*  --------------------------------------------------------------------------  *\
+
+    FORMS > LABEL INSIDE > LABELS
+
+\*  --------------------------------------------------------------------------  */
+label {
+    @include position(absolute, null, (top, left), (50%, (#{($gutter) + ($gutterSm * .5)})), translate(0, -50%));
+}
+// FOCUS MOVES THE LABEL OUT OF THE WAY
+input:not([type="checkbox"]):not([type="radio"]), select {
+    &:focus {
+        + label {
+            @include transform(translate(0, -150%));
+            font-size: 1rem;
+            line-height: 1.6rem;
+        }
+    }
+}
+// MODIFICATION FOR DATE, FILE, AND RANGE INPUTS
+input[type="date"], input[type="file"], input[type="range"], select {
+    + label {
+        @include transform(translate(0, -150%));
+        font-size: 1rem;
+        line-height: 1.6rem;
+    }
+}
+// MODIFICATION FOR TEXTAREA
+textarea {
+    + label {
+        top: .75em;
+        @include transform(translate(0, -50%));
+    }
+    
+    &:focus {
+        
+        + label {
+            @include transform(translate(0, -50%));
+            font-size: 1rem;
+            line-height: 1.6rem;
+        }
+    }
+}
+// VALIDATION KEEPS THE LABEL OUT OF THE WAY
+.valid, .invalid {
+    label {
+        @include transform(translate(0, -150%));
+        font-size: 1rem;
+        line-height: 1.6rem;
+    }
+}
