@@ -29,16 +29,16 @@
         {% if page.locBreadcrumb == "hero" %}
             {% include components/navigation/breadcrumb.html %}
         {% endif %}
-        {% if page.heroTitle %}
-            <h1>{{ page.heroTitle }}</h1>
+        {% if page.hero.title %}
+            <h1>{{ page.hero.title }}</h1>
         {% else %}
             <h1>{{ page.title }}</h1>
         {% endif %}
-        {% if page.heroSubtitle %}
-            <p class="intro">{{ page.heroSubtitle }}</p>
+        {% if page.hero.intro %}
+            <p class="intro">{{ page.hero.intro }}</p>
         {% endif %}
-        {% if page.heroCTAText and page.heroCTALink %}
-            <a href="{{ page.heroCTALink }}" class="btn-primary">{{ page.heroCTAText }}</a>
+        {% if page.hero.cta_text %}
+            <a href="{{ page.hero.cta_link }}" class="btn-primary">{{ page.hero.cta_text }}</a>
         {% endif %}
     </div>
 </header>

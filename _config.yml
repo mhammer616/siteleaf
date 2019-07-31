@@ -29,6 +29,6 @@ defaults:
     hero:
       title: ''
       intro: ''
-      cta text: ''
-      cta link: ''
+      cta_text: ''
+      cta_link: ''
 permalink: pretty
