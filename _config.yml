@@ -27,7 +27,7 @@ defaults:
       title: 
       description: 
     hero:
-      class: 'bg-primary ta-center'
+      class: bg-primary ta-center
       title: 
       intro: 
       cta:
