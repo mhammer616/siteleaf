@@ -8,8 +8,9 @@ hero:
   intro: In a complex world that's always demanding more, R2i is a digital agency
     that helps marketers create more awareness, build deeper relationships, and drive
     measurable impact.
-  cta text: About R2i
-  cta link: "/about"
+  cta:
+    copy: About R2i
+    link: "/about"
 ---
 
 ## Brands we accelerate
