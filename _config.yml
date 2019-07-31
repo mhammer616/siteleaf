@@ -24,8 +24,8 @@ defaults:
   values:
     layout: page
     hero:
-        title: ''
-        intro: ''
+      title: ''
+      intro: ''
 permalink: pretty
 Hero:
   Title: 
