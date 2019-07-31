@@ -32,4 +32,9 @@ defaults:
       cta:
         copy: ''
         link: ''
+- scope:
+    path: ''
+    type: pages
+  values:
+    layout: home
 permalink: pretty
