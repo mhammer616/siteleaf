@@ -24,17 +24,13 @@ defaults:
   values:
     layout: page
     metadata:
-      title: ''
-      description: ''
+      title: 
+      description: 
     hero:
-      title: ''
-      intro: ''
+      class: 'bg-primary ta-center'
+      title: 
+      intro: 
       cta:
-        copy: ''
-        link: ''
-- scope:
-    path: ''
-    type: pages
-  values:
-    layout: home
+        copy: 
+        link: 
 permalink: pretty

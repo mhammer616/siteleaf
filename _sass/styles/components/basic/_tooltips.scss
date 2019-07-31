@@ -111,7 +111,7 @@
 
     @media #{$mediaMd} {
         // POSITIONING (DISPLAY, FLEX, FLEX ITEM, POSITION, LEFT, TOP, TRANSFORM)
-        @include position(absolute, null, top, (#{$gutter * -1}), translate(-50%, -100%)); 
+        @include position(absolute, null, top, ($gutter * -1), translate(-50%, -100%)); 
         // BOX SIZING (WIDTH, HEIGHT, MARGIN, PADDING)
         // BOX STYLING (OPACITY, BACKGROUND, BOX SHADOW, BORDER, BORDER RADIUS, OVERFLOW)
         // FONT STYLING (FONT, FONT-FAMILY, FONT-STYLE, FONT-SIZE, LINE-HEIGHT, FONT-WEIGHT)
