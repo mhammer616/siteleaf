@@ -23,7 +23,12 @@ defaults:
     type: pages
   values:
     layout: page
+    metadata:
+      title: ''
+      description: ''
     hero:
       title: ''
       intro: ''
+      cta text: ''
+      cta link: ''
 permalink: pretty
