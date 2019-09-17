@@ -33,5 +33,5 @@ defaults:
       cta:
         copy: 
         link: 
-        class: [btn-primary, btn-secondary, btn-tertiary]
+        class: btn-primary
 permalink: pretty
