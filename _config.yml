@@ -27,10 +27,13 @@ defaults:
       title: 
       description: 
     hero:
-      class: bg-primary ta-center
+      background_class: [bg-primary, bg-secondary, bg-tertiary, bg-primary-lt, bg-secondary-lt, bg-tertiary-lt, bg-accent-1, bg-accent-2, bg-accent-3]
+      size_class: [lg, sm, fs]
+      alignment_class: [ta-left, ta-center, ta-right]
       title: 
       intro: 
       cta:
         copy: 
         link: 
+        class: [btn-primary, btn-secondary, btn-tertiary]
 permalink: pretty
