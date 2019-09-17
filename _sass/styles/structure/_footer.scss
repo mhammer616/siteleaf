@@ -1,0 +1,56 @@
+/*  --------------------------------------------------------------------------  *\
+
+    FOOTER
+
+\*  --------------------------------------------------------------------------  */
+.cl-footer, // DELETE THIS FOR NON CL PROJECTS
+body>footer {
+    padding: #{$gutterSm} 0;
+    background: $secondary;
+    color: $white;
+    
+    @media #{$mediaMd} {
+        padding: #{$gutter} 0;
+    }
+    
+    > div {
+        @include flex(space-between, center, null, row wrap);
+        margin: 0 auto;
+        padding: 0 #{$gutterSm * .5};
+        max-width: $siteWMx;
+        @include setW();
+        
+        @media #{$mediaFullHeader} {
+            padding: 0 #{$gutter * .5};
+        }
+        
+        + div {
+            
+            &:before {
+                @include flexItem(0, 0, auto);
+                display: block;
+                width: 100%;
+                margin: #{$gutterSm} auto;
+                border-top: .2rem solid $white;
+                content: "";
+            }
+            
+            @media #{$mediaMd} {
+                margin: #{$gutter} auto;
+            }
+        }
+    }
+    /*  ----------------------------------------------------------------------  *\
+
+        COMPONENTS
+
+    \*  ----------------------------------------------------------------------  */
+    @import 'footer/components/_copyright';
+    /*  ----------------------------------------------------------------------  *\
+
+        NAVIGATIONS
+
+    \*  ----------------------------------------------------------------------  */
+    @import 'footer/navs/_social';
+    @import 'footer/navs/_sitemap';
+}

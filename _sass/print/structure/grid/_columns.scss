@@ -1,0 +1,56 @@
+/*  --------------------------------------------------------------------------  *\
+
+    COLUMNS
+
+    This sets up the base for all columns.
+
+\*  --------------------------------------------------------------------------  */
+[class*="col-"] {
+    padding: 0 #{$gutterSm * .5};
+    margin: 0;
+    @include flexItem(0, 0, auto, 1);
+}
+/*  --------------------------------------------------------------------------  *\
+
+    GENERATE COLUMNS
+
+    This mixin generates all columns creating XS-LG with 12 columns.
+
+\*  --------------------------------------------------------------------------  */
+@include generateCols(XS, $mediaPrint);
+@include generateCols(SM, $mediaPrint);
+@include generateCols(MD, $mediaPrint);
+/*  --------------------------------------------------------------------------  *\
+
+    SETTING MARGIN SPECIFICS
+
+    This will fix margins when two elements are next to each other with a 12
+    column count.
+
+\*  --------------------------------------------------------------------------  */
+// EXTRA SMALL COLUMNS
+.col-xs-12 {
+    + .col-xs-12 {
+        margin-top: #{$gutterSm};
+        
+        &[class*="col-md-"] {
+            margin-top: 0;
+        }
+    }
+}
+// SMALL COLUMNS
+.col-sm-12 {
+    + .col-sm-12 {
+        margin-top: #{$gutterSm};
+    }
+    
+    &[class*="col-md-"] {
+        margin-top: 0;
+    }
+}
+// MEDIUM COLUMNS
+.col-md-12 {
+    + .col-md-12 {
+        margin-top: #{$gutter};
+    }
+}

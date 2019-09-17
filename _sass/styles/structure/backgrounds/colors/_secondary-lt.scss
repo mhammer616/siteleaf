@@ -1,0 +1,9 @@
+/*  --------------------------------------------------------------------------  *\
+
+    BACKGROUNDS - COLORS - SECONDARY LIGHT
+
+\*  --------------------------------------------------------------------------  */
+.bg-secondary-lt {
+    background: $secondary-light;
+}
+@include bgPercentageBase(bg-secondary-lt, $secondary-light);

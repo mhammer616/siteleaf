@@ -1,0 +1,31 @@
+/*  --------------------------------------------------------------------------  *\
+
+    BREADCRUMB
+
+\*  --------------------------------------------------------------------------  */
+&.bc {
+    display: block;
+    margin: 0 0 #{$gutterSm};
+    color: $primary;
+    
+    ol {
+        @include flex(center, center, center);
+    }
+    
+    li {
+        
+        + li {
+            
+            &:before {
+                display: inline;
+                position: static;
+                margin: 0 #{$gutter * .4};
+                content: "\00bb";
+            }
+        }
+    }
+    
+    a {
+        color: $primary;
+    }
+}

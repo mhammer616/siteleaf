@@ -1,0 +1,17 @@
+/*  --------------------------------------------------------------------------  *\
+
+    OWL CAROUSEL - ITEM
+
+    This styles the globally used owl-item wrapping element.
+
+\*  --------------------------------------------------------------------------  */
+.owl-item {
+    
+    &.cloned {
+        display: none;
+    }
+    
+    + .owl-item {
+        margin-top: #{$gutterSm};
+    }
+}

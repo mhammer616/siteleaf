@@ -1,0 +1,24 @@
+{% assign type = "image" %}
+{% if include.type %}
+    {% assign type = include.type %}
+{% endif %}
+{% assign copy = "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius eaque minus aliquam esse necessitatibus odit quibusdam velit, quisquam reiciendis in cumque, qui sed commodi debitis.</p>" %}
+{% if include.copy %}
+    {% assign copy = include.copy %}
+{% endif %}
+<figure {% if include.figClass %}class="{{ include.figClass }}"{% endif %}{% if include.figIndex %} tabindex="{{ include.figIndex }}"{% endif %}>
+    {% case type %}
+        {% when 'image' %}
+            {% include components/media/image.html %}
+        {% when 'video' %}
+            {% include components/media/video.html %}
+        {% when 'picture' %}
+            {% include components/media/picture.html %}
+    {% endcase %}
+    <figcaption>
+        {% if include.title %}
+            <h4>{{ include.title }}</h4>
+        {% endif %}
+        {{ copy }}
+    </figcaption>
+</figure>

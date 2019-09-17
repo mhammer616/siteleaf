@@ -1,0 +1,37 @@
+/*  --------------------------------------------------------------------------  *\
+
+    BREADCRUMB
+
+\*  --------------------------------------------------------------------------  */
+&.bc {
+    margin: 0 0 #{$gutterSm};
+    color: $accent-3;
+    
+    ol {
+        @include flex(center, center, center);
+    }
+    
+    li {
+    
+        + li {
+            @include position(relative, null);
+            padding: 0 0 0 $gutter;
+            
+            &:before {
+                display: block;
+                left: #{$gutter * .5};
+                top: 50%;
+                @include transform(translate(-50%, -50%));
+                content: "\00bb";
+            }
+        }
+    }
+    
+    a {
+        color: $accent-1;
+        
+        @include hover {
+            color: $accent-3;
+        }
+    }
+}

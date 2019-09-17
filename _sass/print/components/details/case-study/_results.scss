@@ -1,0 +1,24 @@
+/*  --------------------------------------------------------------------------  *\
+
+    CASE STUDY - RESULTS
+
+\*  --------------------------------------------------------------------------  */
+.cs-results {
+    @include grid((1fr 1fr), auto, $gutter, $gutter);
+    
+    @media #{$mediaMd} {
+        @include gridColumns(1fr 1fr 1fr 1fr);
+    }
+    
+    li {
+        padding: 0;
+        
+        &:before {
+            display: none;
+        }
+        
+        + li {
+            margin: 0;
+        }
+    }
+}

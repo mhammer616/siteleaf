@@ -1,0 +1,9 @@
+/*  --------------------------------------------------------------------------  *\
+
+    BACKGROUNDS - COLORS - PRIMARY LIGHT
+
+\*  --------------------------------------------------------------------------  */
+.bg-primary-lt {
+    background: $primary-light;
+}
+@include bgPercentageBase(bg-primary-lt, $primary-light);

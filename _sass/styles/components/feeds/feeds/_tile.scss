@@ -1,0 +1,20 @@
+/*  --------------------------------------------------------------------------  *\
+
+    FEED - TILES
+
+\*  --------------------------------------------------------------------------  */
+.f-tiles, .f-tiles-4 {
+    margin: 0 0 #{$gutter};
+    // POSITIONING (DISPLAY, FLEX, FLEX ITEM, POSITION, LEFT, TOP, TRANSFORM)
+    @include grid((1fr 1fr), (1fr));
+    
+    @media #{$mediaMd} {
+        @include gridColumns((1fr 1fr 1fr));
+    }
+}
+
+.f-tiles-4 {
+    @media #{$mediaLg} {
+        @include gridColumns((1fr 1fr 1fr 1fr));
+    }
+}

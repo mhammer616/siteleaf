@@ -1,0 +1,21 @@
+<header class="hero {{ page.heroClass }}">
+    <div class="cnt">
+        {% if page.title != "Home" and page.layout != "post" %}
+            {% include components/navigation/breadcrumb.html %}
+        {% endif %}
+        {% if page.layout == "post" %}
+            {% include components/detail/category-breadcrumb.html %}
+        {% endif %}
+        {% if page.heroTitle %}
+            <h1>{{ page.heroTitle }}</h1>
+        {% else %}
+            <h1>{{ page.title }}</h1>
+        {% endif %}
+        {% if page.heroSubtitle %}
+            <p class="intro">{{ page.heroSubtitle }}</p>
+        {% endif %}
+        {% if page.heroCTAText and page.heroCTALink %}
+            <a href="{{ page.heroCTALink }}" class="btn-primary">{{ page.heroCTAText }}</a>
+        {% endif %}
+    </div>
+</header>

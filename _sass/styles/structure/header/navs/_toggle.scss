@@ -1,0 +1,60 @@
+/*  --------------------------------------------------------------------------  *\
+
+    HEADER - NAVIGATION - TOGGLE
+
+\*  --------------------------------------------------------------------------  */
+& { 
+    .toggle-trigger {
+        $barH: .6rem;
+        @include position(relative, null);
+        width: #{$gutter};
+        height: #{$barH * 6};
+        
+        .bar {
+            display: block;
+            @include position(absolute, null, (left, top), (50%, 50%));
+            height: $barH;
+            width: 100%;
+            background: $primary;
+            @include transition(transform .25s);
+            
+            &:nth-child(1) {
+                @include transform(translate(-50%, -50%));
+            }
+            
+            &:nth-child(2) {
+                @include transform((translate(-50%, -50%) translate(0, -200%)));
+            }
+            
+            &:nth-child(3) {
+                @include transform((translate(-50%, -50%) translate(0, 200%)));
+            }
+        }
+        
+        @media #{$mediaFullHeader} {
+            display: none;
+        }
+    }
+    
+    .toggle {
+        @include srOnly();
+        
+        &:checked {
+            + .toggle-trigger {
+                .bar {
+                    &:nth-child(1) {
+                        width: 0;
+                    }
+                    
+                    &:nth-child(2) {
+                        @include transform((translate(-50%, -50%) rotate(45deg)));
+                    }
+                    
+                    &:nth-child(3) {
+                        @include transform((translate(-50%, -50%) rotate(-45deg)));
+                    }
+                }
+            }
+        }
+    }
+}

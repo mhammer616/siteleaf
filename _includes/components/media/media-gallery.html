@@ -1,0 +1,33 @@
+{% assign galleryContent = site.data.components.interactive.media-gallery-1 %}
+{% if include.galleryContent %}
+{% assign galleryContent = include.galleryContent %}
+{% endif %}
+
+<div class="media-gallery{% if include.class %} {{ include.class }}{% endif %}"{% if include.id %} id="{{ include.id }}"{% endif %}>
+    <div class="gallery-thumbnails">
+        {% for item in galleryContent %}
+            {% if item.imgSrc %}
+                <figure>
+                    <img src="{{ item.imgSrc }}" alt="{% if item.imgAlt %}{{ item.imgAlt }}{% else %}Image{% endif %}"/>
+                    {% if item.title or item.desc %}
+                        <figcaption>
+                            {% if item.title %}<h3>{{ item.title }}</h3>{% endif %}
+                            {% if item.desc %}<p>{{ item.desc }}</p>{% endif %}
+                        </figcaption>
+                    {% endif %}
+                </figure>
+            {% endif %}
+            {% if item.vidThumbSrc %}    
+                <figure class="vid-thumb">
+                    <img src="{{ item.vidThumbSrc }}" alt="{% if item.vidThumbAlt %}{{ item.vidThumbAlt }}{% else %}Image{% endif %}"/>
+                    {% if item.title or item.desc %}
+                        <figcaption>
+                            {% if item.title %}<h3>{{ item.title }}</h3>{% endif %}
+                            {% if item.desc %}<p>{{ item.desc }}</p>{% endif %}
+                        </figcaption>
+                    {% endif %}
+                </figure>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>

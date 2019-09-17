@@ -1,0 +1,73 @@
+<form class="search">
+    <div class="row no-mb">
+        <div class="form-el">
+            <label for="keyword4">Search</label>
+            <input placeholder="Enter Keywords..." id="keyword4" type="text" required="">
+        </div>
+        <div class="form-btn">
+            <button type="submit" class="btn-primary">
+                {% if include.showIcon != 'false' %}
+                    <span class="fas fa-search"></span>
+                {% endif %}
+                {% if include.showText != 'false' %}
+                    Search
+                {% else %}
+                    <span class="sr-only">Search</span>
+                {% endif %}
+            </button>
+        </div>
+    </div>
+    {% if include.advanced != 'false' %}
+        <input id="advSearch" type="checkbox" class="hidden">
+        <label for="advSearch" class="toggle">Advanced Search</label>
+        <div class="search-adv">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4">
+                    <p class="h5" id="advOptions1">Facet List 1</p>
+                    <div class="form-group col-xs-12" role="group" aria-labelledby="advOptions1">
+                        <input id="check1" type="checkbox">
+                        <label for="check1">Option 1</label>
+                        <input id="check2" type="checkbox">
+                        <label for="check2">Option 2</label>
+                        <input id="check3" type="checkbox">
+                        <label for="check3">Option 3</label>
+                        <input id="check4" type="checkbox">
+                        <label for="check4">Option 4</label>
+                        <input id="check5" type="checkbox">
+                        <label for="check5">Option 5</label>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <p class="h5" id="advOptions2">Facet List 2</p>
+                    <div class="form-group col-xs-12" role="group" aria-labelledby="advOptions2">
+                        <input id="check6" type="checkbox">
+                        <label for="check6">Option 1</label>
+                        <input id="check7" type="checkbox">
+                        <label for="check7">Option 2</label>
+                        <input id="check8" type="checkbox">
+                        <label for="check8">Option 3</label>
+                        <input id="check9" type="checkbox">
+                        <label for="check9">Option 4</label>
+                        <input id="check10" type="checkbox">
+                        <label for="check10">Option 5</label>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <p class="h5" id="advOptions3">Facet List 3</p>
+                    <div class="form-group col-xs-12" role="group" aria-labelledby="advOptions3">
+                        <input id="check11" type="checkbox">
+                        <label for="check11">Option 1</label>
+                        <input id="check12" type="checkbox">
+                        <label for="check12">Option 2</label>
+                        <input id="check13" type="checkbox">
+                        <label for="check13">Option 3</label>
+                        <input id="check14" type="checkbox">
+                        <label for="check14">Option 4</label>
+                        <input id="check15" type="checkbox">
+                        <label for="check15">Option 5</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</form>

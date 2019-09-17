@@ -1,0 +1,28 @@
+/*  --------------------------------------------------------------------------  *\
+
+    SECTIONS
+
+\*  --------------------------------------------------------------------------  */
+section {
+    padding: #{$gutter} 0;
+    
+    &.sm {
+        padding: #{$gutterSm} 0;
+    }
+    
+    &.lg {
+        padding: #{$gutterLg} 0;
+    }
+    
+    > div {
+        margin: 0 auto;
+        padding: 0 #{$gutterSm * .5};
+        max-width: $siteWMx;
+
+        @media #{$mediaMd} {
+            padding: 0 #{$gutter * .5};
+        }
+        
+        @include setW();
+    }
+}

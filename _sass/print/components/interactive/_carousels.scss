@@ -1,0 +1,59 @@
+/*  --------------------------------------------------------------------------  *\
+
+    CAROUSEL
+
+\*  --------------------------------------------------------------------------  */
+.owl-carousel {
+    /* -------------------------- *\
+    LOAD CORE
+    \* -------------------------- */
+    @import 'carousels/_core';
+    /* -------------------------- *\
+    ITEM
+    
+    This adds styles to use on all slides w/in the owl carousel.
+    \* -------------------------- */
+    @import 'carousels/_item';
+    /* -------------------------- *\
+    DOTS OPTIONS
+    
+    Comment out what you don't want to include.  Also, if only one style is used, remove the class
+    name from the imported file to reduce output of code.
+    \* -------------------------- */
+    &.traditional {
+        @import 'carousels/dots/_dot';
+    }
+    &.counter-of {
+        @import 'carousels/dots/_counter-of';
+    }
+    &.counter-slash {
+        @import 'carousels/dots/_counter-slash';
+    }
+    &.dots-left {
+        @import 'carousels/dots/_left';
+    }
+    &.dots-right {
+        @import 'carousels/dots/_right';
+    }
+    &.dots-centered {
+        @import 'carousels/dots/_centered';
+    }
+    /* -------------------------- *\
+    NAV OPTIONS
+    
+    Comment out what you don't want to include.  Also, if only one style is used, remove the class
+    name from the imported file to reduce output of code.
+    \* -------------------------- */
+    &.nav-over-centered {
+        @import 'carousels/navs/_over-centered';
+    }
+    &.nav-below-left {
+        @import 'carousels/navs/_below-left';
+    }
+    &.nav-below-right {
+        @import 'carousels/navs/_below-right';
+    }
+    &.nav-below-centered {
+        @import 'carousels/navs/_below-centered';
+    }
+}

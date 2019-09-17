@@ -1,0 +1,20 @@
+/*  --------------------------------------------------------------------------  *\
+
+    OWL CAROUSEL - CORE
+
+    You should never need to touch this file.
+
+\*  --------------------------------------------------------------------------  */
+& {
+    width: 100%;
+    margin: 0 auto #{$gutter};
+    
+    .owl-stage {
+        -webkit-transform: none !important;
+                transform: none !important;
+    }
+
+    .owl-dots, .owl-nav {
+        display: none;
+    }
+}

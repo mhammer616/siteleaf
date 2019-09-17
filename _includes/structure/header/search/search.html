@@ -1,0 +1,8 @@
+{% case include.searchStyle %}
+    {% when 'dialog' %}
+        {% include structure/header/search/dialog-button.html %}
+    {% when 'over' %}
+        {% include structure/header/search/over-button.html %}
+    {% when 'inline' %}
+        {% include structure/header/search/inline.html %}
+{% endcase %}

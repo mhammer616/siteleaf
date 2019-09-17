@@ -1,0 +1,17 @@
+/*  --------------------------------------------------------------------------  *\
+
+    FORMS > LABEL ABOVE > TEXTAREAS
+
+\*  --------------------------------------------------------------------------  */
+textarea {
+    display: block;
+    order: 1;
+    width: 100%;
+    height: calc(6em + ($formLAGutter * 2));
+    padding: $formLAGutter;
+    @include formBorder($formLABorder, $formLABorderStyle);
+    
+    &:focus {
+        border-color: $formLABorderFocus;
+    }
+}

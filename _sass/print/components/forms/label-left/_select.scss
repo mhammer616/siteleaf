@@ -1,0 +1,16 @@
+/*  --------------------------------------------------------------------------  *\
+
+    FORMS > LABEL LEFT > SELECTS
+
+\*  --------------------------------------------------------------------------  */
+select {
+    display: block;
+    order: 1;
+    width: calc(100% - #{$formLLLabelW} - #{$gutter * .5});
+    padding: $formLLGutter;
+    @include formBorder($formLLBorder, $formLLBorderStyle);
+    
+    &:focus {
+        border-color: $formLLBorderFocus;
+    }
+}

@@ -1,0 +1,67 @@
+{% assign slideContent = site.data.components.interactive.combined-carousel-1 %}
+{% if include.slideContent %}
+{% assign slideContent = include.slideContent %}
+{% endif %}
+<div class="combined-carousel">
+    <div class="owl-carousel traditional nav-below-left {{ include.class }}" id="largeCarousel{{ include.id }}">
+        {% for item in slideContent %}
+        <figure class="item">
+            {% if item.imgSrc %}<img src="{{ item.imgSrc }}" alt="{% if item.imgAlt %}{{ item.imgAlt }}{% else %}Image{% endif %}"/>{% endif %}
+            {% if item.content %}<figcaption>{{ item.content }}</figcaption>{% endif %}
+        </figure>
+        {% endfor %}
+    </div>
+    <div class="owl-carousel" id="thumbnailCarousel{{ include.id }}">
+        {% for item in slideContent %}
+        <div class="item">
+            {% if item.imgSrc %}<img src="{{ item.imgSrc }}" alt="{% if item.imgAlt %}{{ item.imgAlt }}{% else %}Image{% endif %}"/>{% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+        var sync1 = $('#largeCarousel{{ include.id }}'),
+            sync2 = $('#thumbnailCarousel{{ include.id }}'),
+            duration = 300
+        sync1.on('click', '.owl-next', function () {
+            sync2.trigger('next.owl.carousel')
+        });
+        sync1.on('click', '.owl-prev', function () {
+            sync2.trigger('prev.owl.carousel')
+        });
+        sync1.owlCarousel({
+            center: true,
+            loop: true,
+            items: 1,
+            touchDrag: false,
+            mouseDrag: false,
+            autoHeight:true,
+            margin:0,
+            nav:true, 
+            dots:false
+        });
+        sync2.owlCarousel({
+            loop: true,
+            center:true,
+            items: 5,
+            touchDrag: false,
+            mouseDrag: false,
+            margin:5,
+            nav:false,
+            dots:false
+        });
+        sync2.on('click', '.owl-item', function() {
+            $('#thumbnailCarousel{{ include.id }} .owl-item').removeClass('selected');
+            $(this).addClass('selected');
+
+            var index = $(this).index();
+            var tempFix = index - ($('#thumbnailCarousel{{ include.id }} .owl-item.cloned').length / 2);
+            index = tempFix;
+
+            var i = index;
+            sync2.trigger('to.owl.carousel', i);
+            sync1.trigger('to.owl.carousel', i);
+        });
+    });
+</script>

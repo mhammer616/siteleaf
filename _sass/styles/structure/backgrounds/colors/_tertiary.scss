@@ -1,0 +1,9 @@
+/*  --------------------------------------------------------------------------  *\
+
+    BACKGROUNDS - COLORS - TERTIARY
+
+\*  --------------------------------------------------------------------------  */
+.bg-tertiary {
+    background: $tertiary;
+}
+@include bgPercentageBase(bg-tertiary, $tertiary);

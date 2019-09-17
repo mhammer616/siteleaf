@@ -1,0 +1,59 @@
+/*  --------------------------------------------------------------------------  *\
+
+    EFFECTS MIXINS
+
+    These mixins are only used by the effects library to make using them simpler.
+
+\*  --------------------------------------------------------------------------  */
+@mixin scrollbar($w: 1rem, $mh: 50vh, $br: 1rem, $trackColor: $accent-3, $thumbColor: $primary, $thumbHovColor: $secondary) {
+    max-height: $mh;
+    overflow: auto;
+    
+    &:focus-within {
+        @include boxShadow(0 0 .5rem rgba($black, .3));
+    }
+    /*  ----------------------------------------------------------------------  *\
+
+        STYLING THE SCROLLBAR
+    
+        ::-webkit-scrollbar will style the scrollbar, this is your background 
+        of the entire scrollbar container. This element will also dictate the
+        width of the scrollbar.
+
+    \*  ----------------------------------------------------------------------  */
+    &::-webkit-scrollbar {
+        width: $w;
+        background-color: rgba($white, 0);
+    }
+    /*  ----------------------------------------------------------------------  *\
+
+        STYLING THE TRACK
+    
+        ::-webkit-scrollbar-track will handle the styling of the track itself.
+        The track appears above the scrollbar, and provides a wrapper for the
+        thumb of the scrollbar.
+
+    \*  ----------------------------------------------------------------------  */
+    &::-webkit-scrollbar-track {
+        border-radius: $br;
+        background: $trackColor;
+    }
+    /*  ----------------------------------------------------------------------  *\
+
+        STYLING THE THUMB
+    
+        ::-webkit-scrollbar-thumb will handle the styling of the thumb itself.
+        The thumb is the moveable aspect of the scrollbar that the user can 
+        click on to move.
+
+    \*  ----------------------------------------------------------------------  */
+    &::-webkit-scrollbar-thumb {
+        @include boxShadow(0 0 .5rem rgba($black, .3));
+        border-radius: $br;
+        background: $thumbColor;
+        
+        &:hover {
+            background: $thumbHovColor;
+        }
+    }
+}

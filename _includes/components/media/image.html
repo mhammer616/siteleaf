@@ -1,0 +1,13 @@
+{% assign imgText = "IMAGE" %}
+{% if include.imgText %}
+    {% assign imgText = include.imgText %}
+{% endif %}
+{% assign imgRatio = "1600x900" %}
+{% if include.imgRatio %}
+    {% assign imgRatio = include.imgRatio %}
+{% endif %}
+{% assign imgClass = "med-xs-12" %}
+{% if include.imgClass %}
+    {% assign imgClass = include.imgClass %}
+{% endif %}
+<img src="https://via.placeholder.com/{{ imgRatio }}/333/222?text={{ imgText }}" alt="Placeholder image" class="{{ imgClass }}" />

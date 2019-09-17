@@ -1,0 +1,41 @@
+{% assign imgText = "Image" %}
+{% if include.imgText %}
+    {% assign imgText = include.imgText %}
+{% endif %}
+{% for post in site.posts limit: include.count %}
+<article tabindex="0" class="card {{ include.class }}" aria-labelledby="titleFeatured" {% if include.class contains "vert" %}aria-describedby="descFeatured"{% endif %}>
+    {% if include.imgRatio %}
+    <a href="{{ page.url }}">
+        <img src="https://via.placeholder.com/{{ include.imgRatio }}/ccc/e1e1e1?text={{ imgText }}" alt="Image">
+    </a>
+    {% endif %}
+    <div>
+        <p class="type">
+            {% case post.categories[0]  %}
+                {% when 'Blog' %}
+                    <span class="fas fa-rss"></span>
+                {% when 'Event' %}
+                    <span class="fas fa-calendar-alt"></span>
+                {% when 'Whitepaper' %}
+                    <span class="fas fa-file-alt"></span>
+                {% when 'Infographic' %}
+                    <span class="fas fa-image"></span>
+                {% when 'News' %}
+                    <span class="far fa-newspaper"></span>
+            {% endcase %}
+            {{ post.categories }}
+        </p>
+        <h3 id="titleFeatured"><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <p class="by">By {{ post.author }} on {{ post.date | date: "%B, %d %Y" }}</p>
+        {% if include.excerptLimit %}
+        <p id="desc1">{{ post.excerpt | truncate: include.excerptLimit }}</p>
+        {% endif %}
+        <p class="tags">
+            <strong>Tags:</strong>
+            {% for tag in post.tags %}
+            <a href="#">{{ tag | capitalize }}</a>
+            {% endfor %}
+        </p>
+    </div>
+</article>
+{% endfor %}

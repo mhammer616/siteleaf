@@ -1,0 +1,16 @@
+/*  --------------------------------------------------------------------------  *\
+
+    FORMS > LABEL LEFT > INPUTS
+
+\*  --------------------------------------------------------------------------  */
+input:not([type="radio"]):not([type="checkbox"]) {
+    display: block;
+    order: 1;
+    width: calc(100% - #{$formLLLabelW} - #{$gutter * .5});
+    padding: $formLLGutter;
+    @include formBorder($formLLBorder, $formLLBorderStyle);
+    
+    &:focus {
+        border-color: $formLLBorderFocus;
+    }
+}

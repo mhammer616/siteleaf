@@ -1,0 +1,16 @@
+{% for item in site.data.navigation.main %}
+    {% if item.name == page.title && item.children[0] %}
+        <nav class="cp">
+            <ul>
+                {% for child in item.children %}
+                <li>
+                    <a href="{{ child.link }}">
+                        <span class="{{ child.icon }}"></span>
+                        {{ child.name }}
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    {% endif %}
+{% endfor %}

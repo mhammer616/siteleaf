@@ -1,0 +1,32 @@
+/*  --------------------------------------------------------------------------  *\
+
+    HEROES
+
+    Heroes are used to build the first component on each page.  This component is 
+    the header for the main element of the mark-up.  So we will style the hero 
+    using a <header> in the <main id="content"> tag.
+
+\*  --------------------------------------------------------------------------  */
+.hero {
+    padding: #{$gutter} 0;
+    
+    .cnt {
+        
+        :last-child {
+            margin-bottom: 0;
+        }
+    }
+    /*  =---------------------------------------------------------------------  *\
+    
+      IMPORT STYLES FOR SIZE VARIATION
+    
+    \*  ----------------------------------------------------------------------  */
+    @import 'heroes/sizes/_sm';
+    @import 'heroes/sizes/_lg';
+    /*  =---------------------------------------------------------------------  *\
+    
+      IMPORT STYLES FOR INCLUDING MEDIA ELEMENTS
+    
+    \*  ----------------------------------------------------------------------  */
+    @import 'heroes/media';
+}

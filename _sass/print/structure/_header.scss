@@ -1,0 +1,18 @@
+/*  --------------------------------------------------------------------------  *\
+
+    HEADER
+
+\*  --------------------------------------------------------------------------  */
+.cl-header, // FOR COMPONENT LIBRARY USE ONLY REMOVE THIS LINE FOR BUILDS
+body > header {
+    > div {
+        padding: #{$gutterSm} 0;
+        border-bottom: .5pt solid $tertiary;
+        
+        > * {
+            display: none;
+        }
+        
+        @import 'header/logo';
+    }
+}

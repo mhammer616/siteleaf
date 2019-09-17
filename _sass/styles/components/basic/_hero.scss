@@ -1,0 +1,56 @@
+/*  --------------------------------------------------------------------------  *\
+
+    HEROES
+
+    Heroes are used to build the first component on each page.  This component is 
+    the header for the main element of the mark-up.  So we will style the hero 
+    using a <header> in the <main id="content"> tag.
+
+\*  --------------------------------------------------------------------------  */
+.hero {
+    padding: #{$gutter} 0;
+    
+    @media #{$mediaMd} {
+        padding: #{$gutter * 1.5} 0;
+    }
+    
+    @media #{$mediaLg} {
+        padding: #{$gutter} 0;
+    }
+    
+    .cnt {
+        max-width: $siteWMx;
+        margin: 0 auto;
+        padding: 0 #{$gutter / 2};
+        
+        @each $q in $siteWQueryList {
+            $i: index($siteWQueryList, $q);
+                
+            @if $i == 1 {
+                width: nth($siteWList, $i);
+            } @else {
+                @media #{$q} {
+                    width: nth($siteWList, $i);
+                }
+            }
+        }
+        
+        :last-child {
+            margin-bottom: 0;
+        }
+    }
+    /*  =---------------------------------------------------------------------  *\
+    
+      IMPORT STYLES FOR SIZE VARIATION
+    
+    \*  ----------------------------------------------------------------------  */
+    @import 'heroes/sizes/_sm';
+    @import 'heroes/sizes/_lg';
+    @import 'heroes/sizes/_fs';
+    /*  =---------------------------------------------------------------------  *\
+    
+      IMPORT STYLES FOR INCLUDING MEDIA ELEMENTS
+    
+    \*  ----------------------------------------------------------------------  */
+    @import 'heroes/media';
+}

@@ -1,0 +1,13 @@
+{% assign copy="<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi adipisci inventore, eaque incidunt id maxime.</p>" %}
+{% if include.copy %}
+    {% assign copy = include.copy %}
+{% endif %}
+<div role="{{ include.role }}" class="banner {{ include.class }}" id="{{ include.id }}">
+    <div>
+        {{ copy }}
+    </div>
+    <button>
+        <span class="fas fa-times"></span>
+        <span class="sr-only">Dismiss</span>
+    </button>
+</div>

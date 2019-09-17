@@ -1,0 +1,32 @@
+/*  --------------------------------------------------------------------------  *\
+
+    ACCORDION - INDICATOR - CHEVRON TOGGLE
+
+\*  --------------------------------------------------------------------------  */
+&.chevrons {
+    
+    > dt {
+        
+        > button {
+            
+            &:before {
+                @include position(absolute, 1000, (left, top), (100%, 50%), (translate(-100%, -50%) rotate(45deg)));
+                width: .75rem;
+                height: .75rem;
+                border: .2rem solid currentColor;
+                border-top-color: transparent;
+                border-left-color: transparent;
+                transition: all .25s;
+                content: "";
+            }
+
+            &[aria-expanded="true"] {
+
+                &:before {
+                    @include transform(translate(-100%, -50%) rotate(225deg));
+                }
+            }
+     
+        }
+    }
+}

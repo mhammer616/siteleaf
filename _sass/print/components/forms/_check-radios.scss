@@ -1,0 +1,155 @@
+/*  --------------------------------------------------------------------------  *\
+
+    FORMS - CHECK AND RADIO BUTTONS
+
+\*  --------------------------------------------------------------------------  */
+.form-cr {
+    
+    label {
+        &:before {
+            font-family: $iconFF;
+            font-size: 1em;
+            font-weight: 400;
+        }
+    }
+    
+    input[type="checkbox"], input[type="radio"] {
+        @include srOnly();
+        
+        + label {
+            
+            &:before {
+                margin: 0 #{$gutterSm * .25} 0 0;
+            }
+        }
+    }
+    
+    input[type="checkbox"] {
+        
+        + label {
+            &:before {
+                content: "\f0c8"
+            }
+        }
+        
+        &:checked {
+            
+            + label {
+                &:before {
+                    content: "\f14a"
+                }
+            }
+        }
+        
+        &.toggle {
+
+            + label {
+                &:before {
+                    font-weight: 700;
+                    content: "\f204"
+                }
+            }
+
+            &:checked {
+
+                + label {
+                    &:before {
+                        font-weight: 700;
+                        content: "\f205"
+                    }
+                }
+            }
+
+        }
+    }
+    
+    input[type="radio"] {
+        
+        + label {
+            &:before {
+                content: "\f111"
+            }
+        }
+        
+        &:checked {
+            
+            + label {
+                &:before {
+                    content: "\f192"
+                }
+            }
+        }
+    }
+    
+    &.stars {
+        @include position(relative, null);
+        height: 1em;
+        
+        input[type="radio"] {
+            + label {
+                @include position(absolute, null, (left, top), (#{$gutter}, 50%), translate(0, -50%));
+            
+                &:before {
+                    margin: 0;
+                }
+                    
+                &:hover {
+                    
+                    &:before {
+                        font-weight: 700;
+                    }
+                }
+
+                &:nth-of-type(1) {
+                    z-index: 5;
+
+                    &:before {
+                        content: "\f005";
+                    }
+                }
+
+                &:nth-of-type(2) {
+                    z-index: 4;
+
+                    &:before {
+                        content: "\f005\00a0\00a0\00a0\f005";
+                    }
+                }
+
+                &:nth-of-type(3) {
+                    z-index: 3;
+
+                    &:before {
+                        content: "\f005\00a0\00a0\00a0\f005\00a0\00a0\00a0\f005";
+                    }
+                }
+
+                &:nth-of-type(4) {
+                    z-index: 2;
+
+                    &:before {
+                        content: "\f005\00a0\00a0\00a0\f005\00a0\00a0\00a0\f005\00a0\00a0\00a0\f005";
+                    }
+                }
+
+                &:nth-of-type(5) {
+                    z-index: 1;
+
+                    &:before {
+                        content: "\f005\00a0\00a0\00a0\f005\00a0\00a0\00a0\f005\00a0\00a0\00a0\f005\00a0\00a0\00a0\f005";
+                    }
+                }
+            }
+        
+            &:checked {
+                
+                + label {
+                    &:before {
+                        font-weight: 700;
+                    }
+                }
+
+            }
+        }
+    }
+}

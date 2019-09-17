@@ -1,0 +1,37 @@
+/*  --------------------------------------------------------------------------  *\
+
+    FEED - FEATURED - FLEX
+
+\*  --------------------------------------------------------------------------  */
+.f-feat-flex {
+    // POSITIONING (DISPLAY, FLEX, FLEX ITEM, POSITION, LEFT, TOP, TRANSFORM)
+    @include flex(center, stretch, null, row wrap);
+    // BOX SIZING (WIDTH, HEIGHT, MARGIN, PADDING)
+    margin: 0 #{$gutterSm * -.5};
+    // BOX STYLING (OPACITY, BACKGROUND, BOX SHADOW, BORDER, BORDER RADIUS, OVERFLOW)
+    // FONT STYLING (FONT, FONT-FAMILY, FONT-STYLE, FONT-SIZE, LINE-HEIGHT, FONT-WEIGHT)
+    // TEXT STYLING (TEXT-DECORATION, TEXT-TRANSFORM, TEXT-ALIGN, TEXT-SHADOW)
+    // OTHER (TRANSITONS, ANIMATIONS, CURSOR)
+    
+    @media #{$mediaMd} {
+        margin: 0 #{$gutter * -.5};
+    }
+    
+    > article {
+        // POSITIONING (DISPLAY, FLEX, FLEX ITEM, POSITION, LEFT, TOP, TRANSFORM)
+        @include flexItem(1, 0, auto);
+        // BOX SIZING (WIDTH, HEIGHT, MARGIN, PADDING)
+        width: calc(50% - #{$gutterSm});
+        margin: 0 #{$gutterSm / 2} #{$gutterSm};
+        // BOX STYLING (OPACITY, BACKGROUND, BOX SHADOW, BORDER, BORDER RADIUS, OVERFLOW)
+        // FONT STYLING (FONT, FONT-FAMILY, FONT-STYLE, FONT-SIZE, LINE-HEIGHT, FONT-WEIGHT)
+        // TEXT STYLING (TEXT-DECORATION, TEXT-TRANSFORM, TEXT-ALIGN, TEXT-SHADOW)
+        // OTHER (TRANSITONS, ANIMATIONS, CURSOR)
+        
+        @media #{$mediaMd} {
+            width: calc(25% - #{$gutter});
+            max-width: calc(33.333% - #{$gutter});
+            margin: 0 #{$gutter / 2} #{$gutter};
+        }
+    }
+}

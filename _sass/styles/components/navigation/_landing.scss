@@ -1,0 +1,72 @@
+/*  --------------------------------------------------------------------------  *\
+
+    LANDING NAVIGATIONS
+
+\*  --------------------------------------------------------------------------  */
+&.cp {    
+    ul {
+        @include flex(space-between, flex-start, null, row wrap);
+        margin: 0 #{$gutterSm * -.5};
+
+        @media #{$mediaMd} {
+            margin: 0 #{$gutter * -.5};
+        }
+    }
+    
+    li {
+        @include flexItem(0, 0, auto);
+        padding: 0 #{$gutterSm * .5};
+        width: 50%;
+            
+        &:nth-last-child(n + 3) {
+            margin-bottom: #{$gutterSm};
+        }
+        
+        @media #{$mediaMd} {
+            padding: 0 #{$gutter * .5};
+            width: 25%;
+            
+            // RESETS THE 3rd element back to 0
+            &:nth-last-child(3), &:nth-last-child(4) {
+                margin-bottom: 0;
+            }
+            
+            &:nth-last-child(n + 5) {
+                margin-bottom: #{$gutter};
+            }
+        }
+        
+        &:before {
+            display: none;
+        }
+        
+        + li {
+            margin: 0;
+        }
+    }
+    
+    span {
+        display: block;
+        margin: 0 auto #{$gutter};
+        font-size: 5em;
+        text-align: center;
+    }
+    
+    a {
+        display: block;
+        padding: #{$gutter};
+        background: $accent-1;
+        border: .2rem solid $accent-3;
+        text-align: center;
+        
+        @include hover {
+            border-color: $primary;
+            background: $primary;
+            color: $white;
+        }
+    
+        &.active {
+            text-decoration: underline;
+        }
+    }
+}

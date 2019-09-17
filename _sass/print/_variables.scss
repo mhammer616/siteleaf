@@ -1,0 +1,92 @@
+/*  --------------------------------------------------------------------------  *\
+
+    GLOBAL SITE VARIABLES
+
+    ORGANIZATION OF OUR CSS DEFINITIONS GROUP CLASS DEFINITIONS BY THE FOLLOWING TYPES
+
+    POSITIONING (DISPLAY, FLEX, FLEX ITEM, POSITION, LEFT, TOP, TRANSFORM)
+    BOX SIZING (WIDTH, HEIGHT, MARGIN, PADDING)
+    BOX STYLING (OPACITY, BACKGROUND, BOX SHADOW, BORDER, BORDER RADIUS, OVERFLOW)
+    FONT STYLING (FONT, FONT-FAMILY, FONT-STYLE, FONT-SIZE, LINE-HEIGHT, FONT-WEIGHT)
+    TEXT STYLING (TEXT-DECORATION, TEXT-TRANSFORM, TEXT-ALIGN, TEXT-SHADOW)
+    OTHER (TRANSITONS, ANIMATIONS, CURSOR)
+
+    IF A MIXIN IS AVAILABLE USE THAT INSTEAD WRITING ALL PROPERTIES OUT
+
+\*  --------------------------------------------------------------------------  */
+/*  --------------------------------------------------------------------------  *\
+
+    COLORS
+    
+    IT'S IMPORTANT TO USE A GENERIC NAMING SYSTEM FOR COLORS USED THROUGHOUT THE 
+    SITE. THIS ALLOWS US TO BUILD UPDATE VARIABLES IN THE FUTURE WITHOUT HAVING 
+    POTENTIAL ISSUES LIKE RED BECOMING GREEN DUE TO A RE-BRAND.
+
+\*  --------------------------------------------------------------------------  */
+$white: #fff;
+$black: #1d1d1d;
+// SHADES OF GRAY
+$primary: #2d2d2d;
+$primary-light: #b0b0b0;
+$secondary: #5d5d5d;
+$secondary-light: #d0d0d0;
+$tertiary: #8d8d8d;
+$tertiary-light: #f0f0f0;
+// COLORS
+$accent-1: $tertiary-light;
+$accent-2: $secondary-light;
+$accent-3: $primary-light;
+$success: #76bd22;
+$warning: #fce300;
+$danger: #f32836;
+/*  --------------------------------------------------------------------------  *\
+
+    FONT SETTINGS
+
+\*  --------------------------------------------------------------------------  */
+$copyFF: 'Lato', Helvetica, sans-serif; // FONT FAMILY FOR DEFAULT COPY
+$copyFS: 16pt;
+$copyLH: 1.5;
+$copyC: $primary;
+$headingFF: 'Montserrat', Helvetica, sans-serif; // FONT FAMILY FOR HEADINGS (H1-H6)
+$headingC: $secondary;
+$linkC: $tertiary;
+$linkCHov: $primary;
+$linkCAct: $secondary;
+$iconFF: "Font Awesome 5 Free"; // FONT FAMILY FOR HEADINGS (H1-H6)
+$remBase: 10; // REM BASE SHOULD REMAIN 10 UNLESS YOU WANT TO DO A DIFFERENT BASE FOR MEASUREMENT
+/*  --------------------------------------------------------------------------  *\
+
+    MEDIA QUERIES
+
+\*  --------------------------------------------------------------------------  */
+$mediaPrint: " print";
+$mediaXs: " screen and (max-width: 575.9px)"; // MOBILE DEVICES
+$mediaSm: " screen and (min-width: 576px)"; // PHONES LANDSCAPE AND UP
+$mediaSmOnly: " screen and (min-width: 576px) and (max-width: 767.9px)"; // PHONES LANDSCAPE ONLY
+$mediaMd: " screen and (min-width: 768px)"; // TABLETS PORTRAIT AND UP
+$mediaMdOnly: " screen and (min-width: 768px) and (max-width: 991.9px)"; // TABLETS PORTRAIT ONLY
+$mediaLg: " screen and (min-width: 992px)"; // TABLETS LANDSCAPE AND UP
+$mediaLgOnly: " screen and (min-width: 992px) and (max-width: 1199.9px)"; // TABLETS LANDSCAPE ONLY
+$mediaXl: " screen and (min-width: 1200px)"; // SMALL MONITORS
+$mediaXxl: " screen and (min-width: 1425px)"; // LARGER MONITORS
+$mediaToggleHeader: " screen and (max-width: 991.9px)"; // ALL PHONES DEVICES
+$mediaFullHeader: " screen and (min-width: 992px)"; // ALL PHONES DEVICES
+$mediaPortrait: "screen and (orientation: portrait)"; // PORTRAIT LANDSCAPE
+$darkMode: " screen and (prefers-color-scheme: dark)"; // LARGER MONITORS
+/*  --------------------------------------------------------------------------  *\
+
+    GRID SETUP
+
+\*  --------------------------------------------------------------------------  */
+$siteWList: 100%, 95%, 90%, 85%; // LIST USED BY GRID FUNCTION, AND OTHERS TO SET THE DESIRED WIDTH OF THE WEBSITE
+$siteWQueryList: $mediaPrint; // USED BY GRID FUNCTION TO SET BREAKPOINTS
+$siteWMx: 1200px; // SITES CONTENT MAX WIDTH
+$gridMediaList: "MD"; // MEDIA QUERY LIST USED TO GENERATE GRID ELEMENTS
+$gridMediaQueryList: $mediaPrint; // MEDIA QUERIES USED IN COMBINATION WITH GRID MEDIA LIST
+$gridCount: 12; // GRID COUNT
+$gutter: .25in; // GLOBALLY USED SPACING VARIABLE EQUAL TO THE GUTTER BETWEEN COLUMNS
+$gutterSm: ($gutter / 2);
+$gutterLg: ($gutter * 2);
+$gutterXl: ($gutter * 4);
+$gutterXxl: ($gutter * 8);

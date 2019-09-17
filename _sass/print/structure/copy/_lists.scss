@@ -1,0 +1,19 @@
+/*  --------------------------------------------------------------------------  *\
+
+    COPY - LIST STYLES
+
+    Below are resets that will make working with custom bullets and numbers
+    much easier.
+
+\*  --------------------------------------------------------------------------  */
+ul, ol {
+    padding: 0 0 0 #{$gutter};
+}
+/*  --------------------------------------------------------------------------  *\
+
+    IMPORTS FOR EACH LIST DEFINITION
+
+\*  --------------------------------------------------------------------------  */
+@import 'lists/_unordered';
+@import 'lists/_ordered';
+@import 'lists/_definition';

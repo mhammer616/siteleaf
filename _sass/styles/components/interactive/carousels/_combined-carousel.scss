@@ -1,0 +1,19 @@
+/*  --------------------------------------------------------------------------  *\
+
+    OWL CAROUSEL - COMBINED
+
+\*  --------------------------------------------------------------------------  */
+.combined-carousel & {
+    figure {
+        margin:0;
+    }
+    &.nav-below-left {
+        margin-bottom:5rem;
+        .owl-nav {
+            width: 100%;
+            display: flex;
+            flex-direction:row;
+            justify-content: space-between;
+        }
+    }
+}

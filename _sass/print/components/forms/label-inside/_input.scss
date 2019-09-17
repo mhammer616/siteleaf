@@ -1,0 +1,17 @@
+/*  --------------------------------------------------------------------------  *\
+
+    FORMS > LABEL INSIDE > INPUTS
+
+\*  --------------------------------------------------------------------------  */
+input:not([type="radio"]):not([type="checkbox"]) {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: calc(#{$formLIGutter} * 2) $formLIGutter $formLIGutter;
+    @include formBorder($formLIBorder, $formLIBorderStyle);
+    
+    &:focus {
+        border-color: $formLIBorderFocus;
+    }
+}

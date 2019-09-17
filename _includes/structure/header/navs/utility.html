@@ -1,0 +1,8 @@
+<ul class="util">
+    {% for item in site.data.navigation.utility %}
+    <li><a href="{{ item.link }}">{{ item.name }}</a></li>
+    {% endfor %}
+    {% if include.searchLocation == "utility nav" %}
+        {% include structure/header/search/search.html %}
+    {% endif %}
+</ul>

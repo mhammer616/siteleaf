@@ -1,0 +1,36 @@
+/*  --------------------------------------------------------------------------  *\
+
+    HERO > MEDIA
+
+\*  --------------------------------------------------------------------------  */
+&.has-media {
+    @include position(relative, null);
+    overflow: hidden;
+    
+    > img, > picture, > video {
+        @include position(absolute, 0, (left, top), (50%, 50%), translate(-50%, -50%));
+        display: block;
+        width: 100%;
+        height: auto;
+        
+        @media #{$mediaPortrait} {
+            height: 100%;
+            width: auto;
+        }
+    }
+
+    > picture img {
+        display: block;
+        width: 100%;
+        height: auto;
+        
+        @media #{$mediaPortrait} {
+            height: 100%;
+            width: auto;
+        }
+    }
+    
+    .cnt {
+        @include position(relative, 100);
+    }
+}

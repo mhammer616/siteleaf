@@ -1,0 +1,61 @@
+/*  --------------------------------------------------------------------------  *\
+
+    ACCORDION
+
+\*  --------------------------------------------------------------------------  */
+.accordion {
+    margin: 0 0 #{$gutter};
+
+    > dt {
+
+        > button {
+            @include position(relative);
+            width: 100%;
+            padding: #{$gutterSm} #{$gutter} #{$gutterSm} 0;
+            border-bottom: .1rem solid currentColor;
+            background: none;
+            color: $tertiary;
+            text-align: left;
+            font-size: 1.8rem;
+            line-height: 1;
+
+            @include hover {
+                color: $secondary;
+            }
+
+            &[aria-expanded="true"] {
+                color: $primary;
+            }
+        }
+    }
+
+    > dd {
+        width: 100%;
+        padding: #{$gutter} 0;
+        
+        :last-child {
+            margin-bottom: 0;
+        }
+    }
+    /* -------------------------- *\
+    
+    Indicator Options
+    
+    Comment out what you don't want to include.  Also, if only one style is used, remove the class
+    name from the imported file to reduce output of code.
+    
+    \* -------------------------- */
+    @import 'accordions/indicators/_plus-minus';
+    @import 'accordions/indicators/_chevron';
+    @import 'accordions/indicators/_triangle';
+    /* -------------------------- *\
+    
+    Sizing Options
+    
+    Comment out what you don't want to include.  Also, if only one style is used, remove the class
+    name from the imported file to reduce output of code.
+    
+    \* -------------------------- */
+    @import 'accordions/sizing/_sm';
+    @import 'accordions/sizing/_lg';
+}

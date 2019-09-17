@@ -1,0 +1,16 @@
+/*  --------------------------------------------------------------------------  *\
+
+    FORMS > LABEL ABOVE > SELECTS
+
+\*  --------------------------------------------------------------------------  */
+select {
+    display: block;
+    order: 1;
+    width: 100%;
+    padding: $formLAGutter;
+    @include formBorder($formLABorder, $formLABorderStyle);
+    
+    &:focus {
+        border-color: $formLABorderFocus;
+    }
+}

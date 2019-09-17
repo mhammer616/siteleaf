@@ -1,0 +1,20 @@
+{% assign ni = 0 %}
+{% assign ti = 0 %}
+<div class="toggle {{ include.class }}" role="presentation">
+    <nav>
+        <input type="checkbox" id="{{ include.id }}ToggleNav" />
+        <label for="{{ include.id }}ToggleNav">Select Option</label>
+        <ul>
+            {% for toggle in site.data.components.interactive.toggle %}
+            <li><button id="{{ include.id }}Sect{{ ni }}Toggle" aria-expanded="{% if ni == 0 %}true{% else %}false{% endif %}" aria-controls="{{ include.id }}Sect{{ ni }}" type="button" {% if ni == 0 %}aria-disabled="true"{% endif %}>{{ toggle.name }}</button></dt>
+            {% assign ni = ni | plus:1 %}
+            {% endfor %}
+        </ul>
+    </nav>
+    {% for toggle in site.data.components.interactive.toggle %}
+    <div id="{{ include.id }}Sect{{ ti }}" class="panel" aria-labelledby="{{ include.id }}Sect{{ ti }}Toggle" {% if ti > 0 %}hidden{% endif %}>
+        {{ toggle.content }}
+    </div>
+    {% assign ti = ti | plus:1 %}
+    {% endfor %}
+</div>

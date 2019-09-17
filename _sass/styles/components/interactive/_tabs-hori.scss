@@ -1,0 +1,85 @@
+/*  --------------------------------------------------------------------------  *\
+
+    TABS - HORIZONTAL
+
+\*  --------------------------------------------------------------------------  */
+.tabs.hori {
+    
+    @media #{$mediaMd} {
+        @include flex(center, stretch, flex-end, row wrap);
+
+        > dt {
+            @include position(relative, 100);
+            width: 100%;
+            padding: 0;
+            margin: 0;
+
+            > button {
+                width: 100%;
+                padding: #{$gutterSm} #{$gutter};
+                color: $tertiary;
+
+                @include hover {
+                    color: $secondary;
+                }
+
+                &[aria-expanded="true"] {
+                    color: $primary;
+                }
+            }
+
+            @media #{$mediaMd} {
+                @include flexItem(0, 0, auto, 0);
+                width: auto;
+            }
+        }
+
+        > dd {
+            @include position(relative, 0);
+            width: 100%;
+            padding: #{$gutter};
+
+            @media #{$mediaMd} {
+                @include flexItem(0, 0, auto, 1);
+                width: 100%;
+            }
+
+            :last-child {
+                margin-bottom: 0;
+            }
+        }
+        /* -------------------------- *\
+        TAB OPTIONS
+
+        Comment out what you don't want to include.  Also, if only one style is used, remove the class
+        name from the imported file to reduce output of code.
+        \* -------------------------- */
+        @import 'tabs-horizontal/tabs/_traditional';
+        @import 'tabs-horizontal/tabs/_button';
+        @import 'tabs-horizontal/tabs/_minimal';
+        /* -------------------------- *\
+        TAB INDICATOR
+
+        Comment out what you don't want to include.  Also, if only one style is used, remove the class
+        name from the imported file to reduce output of code.
+        \* -------------------------- */
+        @import 'tabs-horizontal/_indicator';
+        /* -------------------------- *\
+        TAB ALIGNMENT
+
+        Comment out what you don't want to include.  Also, if only one style is used, remove the class
+        name from the imported file to reduce output of code.
+        \* -------------------------- */
+        @import 'tabs-horizontal/alignment/_left';
+        @import 'tabs-horizontal/alignment/_right';
+        @import 'tabs-horizontal/alignment/_bottom';
+        /* -------------------------- *\
+        TAB SIZING
+
+        Comment out what you don't want to include.  Also, if only one style is used, remove the class
+        name from the imported file to reduce output of code.
+        \* -------------------------- */
+        @import 'tabs-horizontal/sizing/_sm';
+        @import 'tabs-horizontal/sizing/_lg';
+    }
+}

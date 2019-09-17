@@ -1,0 +1,17 @@
+/*  --------------------------------------------------------------------------  *\
+
+    FORMS > LABEL INSIDE > TEXTAREA
+
+\*  --------------------------------------------------------------------------  */
+textarea {
+    display: block;
+    width: 100%;
+    height: calc(6em + #{$gutterSm + $gutterSm * .5});
+    padding: #{$gutterSm} #{$gutterSm * .5} #{$gutterSm * .5};
+    margin: 0;
+    @include formBorder($formLIBorder, $formLIBorderStyle);
+    
+    &:focus {
+        border-color: $formLIBorderFocus;
+    }
+}

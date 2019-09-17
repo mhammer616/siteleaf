@@ -1,0 +1,20 @@
+/*  --------------------------------------------------------------------------  *\
+
+    BACKGROUNDS - COLORS - WHITE
+
+\*  --------------------------------------------------------------------------  */
+.bg-to-white-hori {
+    &:before {
+        @include bgGradient(to right, rgba($white, 0), $white);
+    }
+}
+.bg-to-white-vert {
+    &:before {
+        @include bgGradient(to bottom, rgba($white, 0), $white);
+    }
+}
+.bg-to-white-45 {
+    &:before {
+        @include bgGradient(45deg, rgba($white, 0), $white);
+    }
+}

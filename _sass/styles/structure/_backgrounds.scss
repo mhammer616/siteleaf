@@ -1,0 +1,55 @@
+/*  --------------------------------------------------------------------------  *\
+
+    BACKGROUNDS
+
+\*  --------------------------------------------------------------------------  */
+@import 'backgrounds/_variables';
+@import 'backgrounds/_mixins';
+/*  --------------------------------------------------------------------------  *\
+
+    IMPORT OF COLORS FOR BACKGROUNDS
+
+    Remove imports not needed for your specific website.
+
+\*  --------------------------------------------------------------------------  */
+@import 'backgrounds/colors/_primary';
+@import 'backgrounds/colors/_secondary';
+@import 'backgrounds/colors/_tertiary';
+@import 'backgrounds/colors/_primary-lt';
+@import 'backgrounds/colors/_secondary-lt';
+@import 'backgrounds/colors/_tertiary-lt';
+@import 'backgrounds/colors/_accent-1';
+@import 'backgrounds/colors/_accent-2';
+@import 'backgrounds/colors/_accent-3';
+@import 'backgrounds/colors/_white';
+/*  --------------------------------------------------------------------------  *\
+
+    SET THE CONTENT CONTAINER COLOR TO WHITE FOR DARK BACKGROUNDS
+
+\*  --------------------------------------------------------------------------  */
+.bg-primary, .bg-secondary, .bg-tertiary {
+    .cnt {
+        color: $white;
+    }
+}
+[class*="bg-to-"] {
+    @include position(relative, null);
+    
+    &:before {
+        @include position(absolute, 0, (left, top), (0, 0));
+        height: 100%;
+        width: 100%;
+        content: "";
+    }
+    
+    > div {
+        @include position(relative, 100);
+    }
+}
+/*  --------------------------------------------------------------------------  *\
+
+    IMPORT OF SHAPES
+
+    Remove imports not needed for your specific website.
+
+\*  --------------------------------------------------------------------------  */

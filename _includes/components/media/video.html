@@ -1,0 +1,16 @@
+{% assign videoText = "VIDEO" %}
+{% if include.videoText %}
+    {% assign videoText = include.videoText %}
+{% endif %}
+{% assign videoRatio = "1600x900" %}
+{% if include.videoRatio %}
+    {% assign videoRatio = include.videoRatio %}
+{% endif %}
+{% assign videoClass = "med-xs-12" %}
+{% if include.videoClass %}
+    {% assign videoClass = include.videoClass %}
+{% endif %}
+
+<video width="1600" height="900" poster="https://via.placeholder.com/{{ videoRatio }}/333/222/?text={{ videoText }}" controls="true" class="{{ videoClass }}">
+    <img src="https://via.placeholder.com/{{ videoRatio }}/333/222/?text={{ videoText }}" alt="Video Placeholder">
+</video>

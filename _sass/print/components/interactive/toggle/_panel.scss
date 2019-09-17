@@ -1,0 +1,18 @@
+/*  --------------------------------------------------------------------------  *\
+
+    TOGGLE - PANEL
+
+\*  --------------------------------------------------------------------------  */
+.panel {
+    display: block;
+    padding: #{$gutter};
+    border: 1px solid $primary;
+    
+    :last-child {
+        margin-bottom: 0;
+    }
+    
+    + .panel {
+        margin-top: #{$gutterSm};
+    }
+}

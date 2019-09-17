@@ -1,0 +1,17 @@
+/*  --------------------------------------------------------------------------  *\
+
+    FORMS > LABEL INSIDE > SELECTS
+
+\*  --------------------------------------------------------------------------  */
+select {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: #{$gutterSm} #{$gutterSm * .5} #{$gutterSm * .5};
+    margin: 0;
+    @include formBorder($formLIBorder, $formLIBorderStyle);
+    
+    &:focus {
+        border-color: $formLIBorderFocus;
+    }
+}

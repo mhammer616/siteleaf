@@ -1,0 +1,40 @@
+{% assign imgText = "IMAGE" %}
+{% if include.imgText %}
+    {% assign imgText = include.imgText %}
+{% endif %}
+{% assign imgRatio = "1600x900" %}
+{% if include.imgRatio %}
+    {% assign imgRatio = include.imgRatio %}
+{% endif %}
+{% assign picXsRatio = "600X400" %}
+{% if include.picXsRatio %}
+    {% assign picXsRatio = include.picXsRatio %}
+{% endif %}
+{% assign picSmRatio = "800X600" %}
+{% if include.picSmRatio %}
+    {% assign picSmRatio = include.picSmRatio %}
+{% endif %}
+{% assign picMdRatio = "1200x675" %}
+{% if include.picMdRatio %}
+    {% assign picMdRatio = include.picMdRatio %}
+{% endif %}
+{% assign picLgRatio = "1600x900" %}
+{% if include.picLgRatio %}
+    {% assign picLgRatio = include.picLgRatio %}
+{% endif %}
+{% assign picXlRatio = "3200x1800" %}
+{% if include.picXlRatio %}
+    {% assign picXlRatio = include.picXlRatio %}
+{% endif %}
+{% assign picClass = "med-xs-12" %}
+{% if include.picClass %}
+    {% assign picClass = include.picClass %}
+{% endif %}
+<picture class="{{ picClass }}">
+    <source srcset="https://via.placeholder.com/{{ picXsRatio }}/333/222?text={{ imgText }}+XS" media="(max-width: 599px)">
+    <source srcset="https://via.placeholder.com/{{ picSmRatio }}/333/222?text={{ imgText }}+SM" media="(max-width: 599px)">
+    <source srcset="https://via.placeholder.com/{{ picMdRatio }}/333/222?text={{ imgText }}+MD" media="(max-width: 599px)">
+    <source srcset="https://via.placeholder.com/{{ picLgRatio }}/333/222?text={{ imgText }}+LG" media="(max-width: 768px)">
+    <source srcset="https://via.placeholder.com/{{ picXlRatio }}/333/222?text={{ imgText }}+XL" media="(min-width: 769px)">
+    <img src="https://via.placeholder.com/{{ imgRatio }}/333/222?text={{ imgText}}+Default" alt="Placeholder image">
+</picture>

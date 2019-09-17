@@ -1,0 +1,29 @@
+/*  --------------------------------------------------------------------------  *\
+
+    FOOTER
+
+\*  --------------------------------------------------------------------------  */
+.cl-footer, // DELETE THIS FOR NON CL PROJECTS
+body>footer {
+    padding: #{$gutterSm} 0;
+    color: $tertiary;
+    border-top: .5pt solid $tertiary;
+    
+    > div {
+        display: none;
+        
+        * {
+            display: none;
+        }
+        
+        &:last-child {
+            display: block;
+        }
+    }
+    /*  ----------------------------------------------------------------------  *\
+
+        COMPONENTS
+
+    \*  ----------------------------------------------------------------------  */
+    @import 'footer/components/_copyright';
+}
